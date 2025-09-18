@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IIBT - India's First Blockchain Institute | Web3 & Metaverse Education</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="CSS/courses.css">
+</head>
+<body>
+    <!-- Animated Background -->
+    <div class="bg-animation" id="bgAnimation"></div>
+
+    <!-- Header -->
+    <header>
+        <div class="header-top">
+            <div class="logo"><img src="images/iibt.jpg" alt="IIBT Logo"></div>
+                <div class="social-media">
+                    <span class="social-text">FOLLOW US SOCIAL MEDIA :</span>
+                    <div class="social-icons">
+                        <a href="https://www.facebook.com/iibt.hyderabad/" target="_blank" class="facebook">
+                            <i class="fab fa-facebook-f"></i>
+                        </a>
+
+                        <a href="https://www.instagram.com/iibt.hyderabad/" target="_blank" class="instagram">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+
+                        <a href="https://www.linkedin.com/in/iibt-hyderabad-032727257/?originalSubdomain=in" target="_blank" class="linkedin">
+                            <i class="fab fa-linkedin-in"></i>
+                        </a>
+                        <a href="https://www.youtube.com/@IIBT" target="_blank" class="youtube">
+                            <i class="fab fa-youtube"></i>
+                        </a>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+        <nav>
+            <div class="hamburger" id="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+            <ul class="nav-links" id="navLinks">
+                <li><a href="home.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="courses.html">Courses</a></li>
+                <li><a href="careers.html">Careers</a></li>
+                <li><a href="trainings.html">College Trainings</a></li>
+                <li><a href="contact.html">Contact Us</a></li>
+                <li><a href="login.html">Login</a></li>
+            </ul>
+        </nav>
+    </header>
+    <!--CONTENT HERE-->
+
+      <div class="container">
+        <div class="header">
+            <h1>Courses</h1>
+            <p>Discover amazing courses to boost your skills</p>
+        </div>
+
+        <div class="filters-section">
+            <div class="filters-container">
+                <div class="search-bar">
+                    <input type="text" id="searchInput" placeholder="Search courses by title, instructor, or description...">
+                </div>
+                
+                <div class="filter-group">
+                    <label for="categoryFilter">Category</label>
+                    <select id="categoryFilter">
+                        <option value="">All Categories</option>
+                    </select>
+                </div>
+
+                <div class="filter-group">
+                    <label for="levelFilter">Level</label>
+                    <select id="levelFilter">
+                        <option value="">All Levels</option>
+                        <option value="Beginner">Beginner</option>
+                        <option value="Intermediate">Intermediate</option>
+                        <option value="Advanced">Advanced</option>
+                    </select>
+                </div>
+
+                <div class="filter-group">
+                    <label for="priceFilter">Price Range</label>
+                    <select id="priceFilter">
+                        <option value="">All Prices</option>
+                        <option value="free">Free</option>
+                        <option value="0-50">$0 - $50</option>
+                        <option value="50-100">$50 - $100</option>
+                        <option value="100-200">$100 - $200</option>
+                        <option value="200+">$200+</option>
+                    </select>
+                </div>
+
+                <div class="filter-group">
+                    <label for="durationFilter">Duration</label>
+                    <select id="durationFilter">
+                        <option value="">All Durations</option>
+                        <option value="short">Under 5 hours</option>
+                        <option value="medium">5-20 hours</option>
+                        <option value="long">20+ hours</option>
+                    </select>
+                </div>
+            </div>
+        </div>
+
+        <div class="results-info">
+            <div>
+                <span id="resultsCount">0</span> courses found
+            </div>
+            <button class="clear-filters" onclick="clearAllFilters()">Clear All Filters</button>
+        </div>
+
+        <div class="loading" id="loading">
+            Loading courses...
+        </div>
+
+        <div class="courses-grid" id="coursesGrid">
+            <!-- Courses will be dynamically loaded here -->
+        </div>
+
+        <div class="no-results" id="noResults" style="display: none;">
+            <h3>No courses found</h3>
+            <p>Try adjusting your filters or search terms</p>
+        </div>
+    </div>
+
+
+    <!-- Footer -->
+    <footer>
+    <div class="footer-container">
+        <div class="footer-main">
+            <!-- Brand Section -->
+            <div class="footer-brand">
+                <div class="footer-logo">
+                    <div class="footer-logo" style="flex: 1 1 180px; min-width: 180px; max-width: 220px; margin-bottom: 1.5rem;">
+                <img src="images/iibt.jpg" alt="IIBT Logo" style="width: 100%; max-width: 180px; height: auto; display: block;">
+            </div>
+                </div>
+                <div class="footer-tagline">Indian Institute of Blockchain Technology(IIBT)</div>
+                <p class="footer-description">
+                    Empowering the next generation of blockchain professionals with cutting-edge education in Web3, DeFi, NFTs, and Metaverse technologies. Join the future of technology today.
+                </p>
+                <div class="footer-social">
+                    <div class="social-media">
+                    <div class="social-icons">
+                        <a href="https://www.facebook.com/iibt.hyderabad/" target="_blank" class="facebook">
+                            <i class="fab fa-facebook-f"></i>
+                        </a>
+
+                        <a href="https://www.instagram.com/iibt.hyderabad/" target="_blank" class="instagram">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+
+                        <a href="https://www.linkedin.com/in/iibt-hyderabad-032727257/?originalSubdomain=in" target="_blank" class="linkedin">
+                            <i class="fab fa-linkedin-in"></i>
+                        </a>
+                        <a href="https://www.youtube.com/@IIBT" target="_blank" class="youtube">
+                            <i class="fab fa-youtube"></i>
+                        </a>
+                    </div>
+
+                </div>
+                </div>
+            </div>
+
+            <!-- Quick Links -->
+            <div class="footer-section">
+                <h3>Quick Links</h3>
+                <ul class="footer-links">
+                    <li><a href="home.html">Home</a></li>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="courses.html">Courses</a></li>
+                    <li><a href="careers.html">Careers</a></li>
+                    <li><a href="trainings.html">College Training</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+
+            <!-- Contact Info -->
+            <div class="footer-section">
+                <h3>Contact Info</h3>
+                <div class="contact-item">
+                    <div class="contact-icon">📍</div>
+                    <div>
+                        Plot NO: 301, 3rd Floor SBR Surya Pearl Building<br>
+                        Opp: Raheja Mind Space IT Park,<br>
+                        HITEC City, Madhapur<br>
+                        Telangana 500081
+                    </div>
+                </div>
+                <div class="contact-item">
+                    <div class="contact-icon">✉️</div>
+                    <div>info@indianinstituteofblockchaintechnology.com</div>
+                </div>
+                <div class="contact-item">
+                    <div class="contact-icon">📞</div>
+                    <div>(+91) 6305328688</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Newsletter Section -->
+        <div class="newsletter-section">
+            <h3>Stay Updated</h3>
+            <p style="color: rgba(255, 255, 255, 0.8); margin-bottom: 1rem;">Subscribe to our newsletter for the latest updates on blockchain technology and course offerings.</p>
+            <form class="newsletter-form">
+                <input type="email" class="newsletter-input" placeholder="Enter your email address" required>
+                <button type="submit" class="newsletter-btn">Subscribe</button>
+            </form>
+        </div>
+
+        <!-- Footer Bottom -->
+        <div class="footer-bottom">
+            <div class="footer-copyright">
+                © 2024 Indian Institute of Blockchain Technology(IIBT). All rights reserved.
+            </div>
+            <div class="footer-legal">
+                <a href="#">Privacy Policy</a>
+                <a href="#">Terms of Service</a>
+                <a href="#">Cookie Policy</a>
+            </div>
+        </div>
+    </div>
+</footer>
+    <script src="JS/courses.js"></script>
+</body>
+</html>
