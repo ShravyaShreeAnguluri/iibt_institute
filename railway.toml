@@ -1,0 +1,11 @@
+[build]
+builder = "nixpacks"
+buildCommand = "cd institute-website && npm install"
+
+[deploy]
+startCommand = "cd institute-website && node backend/server.js"
+restartPolicyType = "ON_FAILURE"
+restartPolicyMaxRetries = 10
+
+[environments.production.variables]
+NODE_ENV = "production"
